@@ -1,3 +1,45 @@
+//TODO/dtoken/note
+
+
+[[Theo]] 
+using YML, JSON5, cli, node module
+for transforms & formatting customization
+
+[[Style Dictionary]]
+config:
+
+```
+StyleDictionary.extend
+source: //tokens.json//
+platforms.scss.transforms,buildPath,files<destination\>
+```
+
+Custom Tranform ex
+
+```
+StyleDictionary.registerTransform({
+  name: 'color/rgbString',
+formatter: (dictionary) => (dictionary.allProperties.map((token) => `$${token.name}: `$${token.value};`
+})
+```
+
+Available Common Transforms:
+
+
+
+Watcher on token files
+Automatic dictionary regeneration
+Watcher on dictionary.json5
+
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go7etebfadj21hc0u044z.jpg" />
+
+* https://github.com/amzn/style-dictionary
+* https://github.com/sturobson/Awesome-Design-Tokens/blob/master/README.md
+* https://didoo.medium.com/how-to-manage-your-design-tokens-with-style-dictionary-98c795b938aa
+
+//ENDCOMMENT
+---
+
 <pre>
 <a href="https://amzn.github.io/style-dictionary/#/version_3">Get ready for the next release of Style Dictionary! 🚀</a>
 </pre>
@@ -24,14 +66,23 @@ For detailed usage head to https://amzn.github.io/style-dictionary
 [![Watch the video](/docs/assets/fake_player.png)](http://youtu.be/1HREvonfqhY)
 
 ## Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Example](#example)
-* [Quick Start](#quick-start)
-* [Style Properties](#style-properties)
-* [Extending](#extending)
-* [Contributing](#contributing)
-* [License](#license)
+- [Style Dictionary](#style-dictionary)
+  - [Watch the Demo on Youtube](#watch-the-demo-on-youtube)
+  - [Contents](#contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [CLI](#cli)
+    - [Node](#node)
+  - [Example](#example)
+    - [config.json](#configjson)
+    - [Properties](#properties)
+  - [Quick Start](#quick-start)
+  - [Style Properties](#style-properties)
+    - [Category/Type/Item Structure](#categorytypeitem-structure)
+  - [Extending](#extending)
+  - [Mascot](#mascot)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 
 ## Installation

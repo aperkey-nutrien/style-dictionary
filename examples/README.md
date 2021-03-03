@@ -41,6 +41,11 @@ If you want to look at more advanced examples of possible applications and custo
 * [**custom-templates**](https://github.com/amzn/style-dictionary/tree/master/examples/advanced/custom-templates/custom-templates) shows how to use "custom" templates to generate design tokens files with custom formats, useful when you need to distribute your design tokens and integrate them with custom pipelines or scripts.
 * [**custom-transforms**](https://github.com/amzn/style-dictionary/tree/master/examples/advanced/custom-templates/custom-transforms) shows how to use custom tranforms (and transformGroups) to apply custom "tranformations" to the properties when converted to design tokens.
 * [**multi-brand-multi-platform**](https://github.com/amzn/style-dictionary/tree/master/examples/advanced/multi-brand-multi-platform) shows how to set up Style Dictionary to support a multi-brand (for brand theming) and multi-platform (web, iOS, Android) solution, with property values depending on brand and plaforms.
+
+TODO/dtokens/workflow use multi-brand so create new brand may continuously integrate (ex: Figma_Commit_Workflow->Bonsai_Token_Dictionary->Storybook->Consumer_Applications) without prompt. Purpose: experimental_theme_brandX can CI if scoped to such theme without altering base styles of system. (changes effecting all brands/themes require authorization via versioning bump or similar human-authorized prompt)
+  
+TODO/dtokens/poc adapt for RN
+
 * [**npm-module**](https://github.com/amzn/style-dictionary/tree/master/examples/advanced/npm-module) shows how to set up a style dictionary as an npm module, either to publish to a local npm service or to publish externally.
 * [**s3**](https://github.com/amzn/style-dictionary/tree/master/examples/advanced/s3) shows how to set up a style dictionary to build files for different platforms (web, iOS, Android) and upload those build artifacts, together with a group of assets, to an S3 bucket.
 * [**referencing_aliasing**](https://github.com/amzn/style-dictionary/tree/master/examples/advanced/referencing_aliasing) shows how to use referencing (or "aliasing") to reference a value -or an attribute– of a property and assign it to the value –or attribute– of another property.
